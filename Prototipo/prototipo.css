@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 60px auto;
+}
+
+#MenuBurguer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+    background-color: lawngreen;
+}
+#MenuBurguer a{
+    transition: color 0.1s ease;
+}
+#MenuBurguer a:hover{
+    color: deepskyblue;
+}
+
+/* NUEVO contenedor general */
+#Contenido {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    height: calc(100vh - 60px);
+}
+
+/* Columna izquierda - chats */
+#Chats {
+    background-color: dodgerblue;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+/* Columna central - búsqueda de usuarios */
+#BusquedaUsuarios {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+/* Columna derecha */
+#MenuDerecha {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid black;
+}
+
+#Notificaciones {
+    background-color: lightgray ;
+    flex: 1;
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+
+#Calendario {
+    background-color: skyblue;
+    flex: 1;
+    border-top: 2px solid black;
+    padding: 10px;
+}
