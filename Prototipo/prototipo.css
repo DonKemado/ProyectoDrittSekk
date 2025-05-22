@@ -58,8 +58,29 @@ body {
 }
 
 #Calendario {
-    background-color: skyblue;
-    flex: 1;
-    border-top: 2px solid black;
+    background-color: #f9f9f9;
     padding: 10px;
+    max-width: 300px;
+    font-family: sans-serif;
 }
+
+#calendario-contenedor {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#calendario-contenedor div {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#calendario-contenedor .hoy {
+    background-color: deepskyblue;
+    color: white;
+    font-weight: bold;
+}
+
