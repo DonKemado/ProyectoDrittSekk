@@ -6,21 +6,29 @@
     <link rel="stylesheet" href="prototipo.css">
     <script src="MenuBurguer.js"></script>
     <script src="Calendario.js"></script>
+    <script src="BuscarUsuarios.js" defer></script>
+    <script src="SolicitudesAmistad.js" defer></script>
 </head>
 <body>
 <div id="MenuBurguer">Menu burguer</div>
 <div id="Contenido">
     <div id="Chats">Chats</div>
-    <div id="BusquedaUsuarios">Buscar</div>
+    <div id="BusquedaUsuarios">
+        <h3>Buscar Usuarios</h3>
+        <input type="text" id="inputBusqueda" placeholder="Buscar...">
+        <button onclick="buscarUsuario()">Buscar</button>
+        <div id="resultadosBusqueda" class="ventana-sugerencias"></div>
+    </div>
     <div id="MenuDerecha">
-        <div id="Notificaciones">Bandeja de entrada</div>
+        <div id="Notificaciones">
+            <h3>Bandeja de entrada</h3>
+            <div id="contenedorNotificaciones"></div>
+        </div>
         <div id="Calendario">
             <h3>Calendario</h3>
             <div id="calendario-contenedor"></div>
         </div>
-
     </div>
 </div>
 </body>
-
 </html>
