@@ -20,21 +20,18 @@ body {
     color: deepskyblue;
 }
 
-/* NUEVO contenedor general */
 #Contenido {
     display: grid;
     grid-template-columns: 20% 1fr 20%;
     height: calc(100vh - 60px);
 }
 
-/* Columna izquierda - chats */
 #Chats {
     background-color: dodgerblue;
     border: 2px solid black;
     padding: 10px;
 }
 
-/* Columna central - búsqueda de usuarios */
 #BusquedaUsuarios {
     border: 2px solid black;
     display: flex;
@@ -43,7 +40,6 @@ body {
     padding: 10px;
 }
 
-/* Columna derecha */
 #MenuDerecha {
     display: flex;
     flex-direction: column;
@@ -97,7 +93,7 @@ body {
 
 .ventana-sugerencias {
     position: absolute;
-    top: 60px; /* o ajusta según altura del input */
+    top: 60px;
     left: 0;
     width: 100%;
     background: white;
@@ -125,7 +121,7 @@ body {
 
 #resultadosBusqueda {
     width: 100%;
-    max-width: 300px; /* Ajusta según necesidad */
+    max-width: 300px;
     background: white;
     border: 1px solid #ccc;
     border-radius: 8px;
