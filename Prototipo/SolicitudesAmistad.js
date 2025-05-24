@@ -20,13 +20,18 @@ function enviarSolicitud(destinatario) {
 function aceptarSolicitud(remitente) {
     const actual = localStorage.getItem("usuarioActual");
     let solicitudes = JSON.parse(localStorage.getItem("solicitudesAmistad")) || [];
-
     solicitudes = solicitudes.filter(s => !(s.remitente === remitente && s.destinatario === actual));
     localStorage.setItem("solicitudesAmistad", JSON.stringify(solicitudes));
-    alert("Has aceptado la solicitud de " + remitente);
 
+    // Guardar amistad
+    let amistades = JSON.parse(localStorage.getItem("amistades")) || [];
+    amistades.push({ usuario1: actual, usuario2: remitente });
+    localStorage.setItem("amistades", JSON.stringify(amistades));
+
+    alert("Has aceptado la solicitud de " + remitente);
     mostrarNotificaciones(); // refrescar
 }
+
 
 // Mostrar solicitudes si estás logueado
 function mostrarNotificaciones() {
